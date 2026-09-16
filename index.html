@@ -1416,6 +1416,7 @@
 
   function next(){
     if(els.nextBtn.disabled) return;
+    if(window.speechSynthesis) window.speechSynthesis.cancel();
     els.nextBtn.disabled = true;
     const level = levels[state.levelIndex];
 
